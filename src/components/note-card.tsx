@@ -5,11 +5,11 @@ import { X } from "lucide-react";
 
 type NoteCardProps = {
   note: {
-    id: string;
-    date: Date;
+    id: number;
+    noteDate: Date;
     content: string;
   };
-  onNoteDeleted: (id: string) => void;
+  onNoteDeleted: (id: number) => void;
 };
 
 export function NoteCard({ note, onNoteDeleted }: NoteCardProps) {
@@ -17,7 +17,7 @@ export function NoteCard({ note, onNoteDeleted }: NoteCardProps) {
     <Dialog.Root>
       <Dialog.Trigger className="rounded-md text-left flex flex-col bg-slate-800 p-5 gap-3 overflow-hidden relative outline-none hover:ring-2 hover:ring-slate-600 focus-visible:ring-2 focus-visible:ring-lime-400">
         <span className="text-sm font-medium text-slate-200">
-          {formatDistanceToNow(note.date, {
+          {formatDistanceToNow(note.noteDate, {
             locale: ptBR,
             addSuffix: true,
           })}
@@ -35,7 +35,7 @@ export function NoteCard({ note, onNoteDeleted }: NoteCardProps) {
           </Dialog.Close>
           <div className="flex flex-1 flex-col gap-3 p-5">
             <span className="text-sm font-medium text-slate-200">
-              {formatDistanceToNow(note.date, {
+              {formatDistanceToNow(note.noteDate, {
                 locale: ptBR,
                 addSuffix: true,
               })}
