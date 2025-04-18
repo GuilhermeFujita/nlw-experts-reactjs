@@ -17,9 +17,9 @@ The notes are stored in the user's browser using localStorage.
 To run the development server, run the following command:
 
 ```bash
-pnpm dev
+yarn dev
 ```
 
-Alternatively, you can use npm or Yarn to run the project.
+Alternatively, you can use npm to run the project.
 
 After that, open [http://localhost:5173](http://localhost:5173) with your browser to see the result.
